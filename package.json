@@ -1,7 +1,7 @@
 {
-  "name": "gstack",
+  "name": "codex-gstack",
   "version": "1.58.5.0",
-  "description": "Garry's Stack — Claude Code skills + fast headless browser. One repo, one install, entire AI engineering workflow.",
+  "description": "Codex-first adaptation of gstack: skills, QA, review, browser automation, docs and shipping workflows for Codex.",
   "license": "MIT",
   "type": "module",
   "bin": {
@@ -62,12 +62,14 @@
     "bun": ">=1.0.0"
   },
   "keywords": [
-    "browser",
-    "automation",
+    "codex",
+    "codex-skills",
+    "gstack",
+    "ai-code-review",
+    "qa-automation",
     "playwright",
-    "headless",
-    "cli",
-    "claude",
+    "browser-automation",
+    "developer-tools",
     "ai-agent",
     "devtools"
   ],
