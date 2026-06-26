@@ -46,14 +46,14 @@ Tambien incluye skills para producto, arquitectura, diseño, documentacion, salu
 Copia y pega esto en Codex:
 
 ```text
-Instala Codex GStack desde https://github.com/facuquilmes/codex-gstack.
+Instala Codex GStack desde https://github.com/facuquilmes123/codex-gstack.
 Clona el repositorio en ~/.gstack/repos/codex-gstack, instala Bun si falta, ejecuta ./setup --host codex --prefix y verifica que aparezcan las skills gstack-* en ~/.codex/skills.
 ```
 
 ### Opcion 2: Windows PowerShell
 
 ```powershell
-git clone --single-branch --depth 1 https://github.com/facuquilmes/codex-gstack.git "$HOME\.gstack\repos\codex-gstack"
+git clone --single-branch --depth 1 https://github.com/facuquilmes123/codex-gstack.git "$HOME\.gstack\repos\codex-gstack"
 cd "$HOME\.gstack\repos\codex-gstack"
 powershell -ExecutionPolicy Bypass -File .\scripts\install-codex.ps1
 ```
@@ -61,7 +61,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install-codex.ps1
 ### Opcion 3: macOS / Linux / Git Bash
 
 ```bash
-git clone --single-branch --depth 1 https://github.com/facuquilmes/codex-gstack.git ~/.gstack/repos/codex-gstack
+git clone --single-branch --depth 1 https://github.com/facuquilmes123/codex-gstack.git ~/.gstack/repos/codex-gstack
 cd ~/.gstack/repos/codex-gstack
 bash scripts/install-codex.sh
 ```

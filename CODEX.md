@@ -7,7 +7,7 @@ Esta guia resume como instalar y usar esta adaptacion dentro de Codex.
 Pega este mensaje en Codex:
 
 ```text
-Instala Codex GStack desde https://github.com/facuquilmes/codex-gstack.
+Instala Codex GStack desde https://github.com/facuquilmes123/codex-gstack.
 Clona el repositorio en ~/.gstack/repos/codex-gstack, instala Bun si falta, ejecuta ./setup --host codex --prefix y verifica que aparezcan las skills gstack-* en ~/.codex/skills.
 ```
 
