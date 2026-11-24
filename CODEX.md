@@ -1,8 +1,8 @@
-# Codex GStack para Codex
+# Codex GStack para OpenAI Codex
 
-Esta guia resume como instalar y usar esta adaptacion dentro de Codex.
+Guía rápida de instalación, actualización y comandos principales para usar **Codex GStack** en Codex.
 
-## Instalacion rapida
+## Instalación rápida
 
 Pega este mensaje en Codex:
 
@@ -11,17 +11,22 @@ Instala Codex GStack desde https://github.com/facuquilmes123/codex-gstack.
 Clona el repositorio en ~/.gstack/repos/codex-gstack, instala Bun si falta, ejecuta ./setup --host codex --prefix y verifica que aparezcan las skills gstack-* en ~/.codex/skills.
 ```
 
-## Comandos mas utiles
+## Comandos más útiles
 
-- `gstack-review`: revision tecnica de cambios.
-- `gstack-qa`: QA visual y funcional.
-- `gstack-investigate`: investigacion de bugs.
-- `gstack-design-review`: revision visual y responsive.
-- `gstack-benchmark`: performance y PageSpeed.
-- `gstack-ship`: preparar entrega.
-- `gstack-land-and-deploy`: deploy con verificacion.
-- `gstack-browse`: navegador headless para inspeccion.
+- `gstack-review`: revisión técnica de cambios y detección de regresiones.
+- `gstack-qa`: QA visual y funcional con navegador real (Playwright).
+- `gstack-investigate`: investigación de bugs y causa raíz.
+- `gstack-design-review`: revisión visual, responsive y UI/UX.
+- `gstack-cso`: auditoría de seguridad y detección de leaks.
+- `gstack-benchmark`: performance y tiempos de carga.
+- `gstack-ship`: preparar entrega, tests y PR.
+- `gstack-land-and-deploy`: deploy con verificación post-release.
+- `gstack-browse`: navegador headless para inspección de DOM y screenshots.
 
-## Recomendacion
+## Recomendación
 
-Usa siempre el prefijo `gstack-*`. Evita conflictos con otras skills de Codex y deja claro que queres usar esta suite.
+Usa siempre el prefijo `gstack-*` para evitar conflictos con otras skills instaladas en `~/.codex/skills`.
+
+## Apoyar el proyecto
+
+Si te resulta útil, podés colaborar en [Cafecito](https://cafecito.app/digitalmenteseguro).

@@ -1,56 +1,43 @@
 # Codex GStack 🚀
 
-**La suite de skills, QA, review, browser automation y shipping pensada para trabajar directamente con Codex.**
+**50+ AI engineering skills, automated QA, code review, Playwright browser automation, security audits, and shipping workflows — adapted for OpenAI Codex.**
+
+*La suite completa de skills, QA visual, code review, browser automation y deploy pensada para trabajar directamente con Codex.*
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Codex Ready](https://img.shields.io/badge/Codex-ready-111827.svg)](#instalacion-en-codex)
-[![Based on gstack](https://img.shields.io/badge/based_on-gstack-blue.svg)](ATTRIBUTION.md)
-[![Donar](https://img.shields.io/badge/apoyar-Cafecito-ffdd00.svg)](https://cafecito.app/digitalmenteseguro)
+[![Codex Ready](https://img.shields.io/badge/OpenAI_Codex-ready-111827.svg)](#instalacion-rapida--quick-start)
+[![Based on gstack](https://img.shields.io/badge/based_on-garrytan%2Fgstack-blue.svg)](ATTRIBUTION.md)
+[![Apoyar en Cafecito](https://img.shields.io/badge/Apoyar-Cafecito-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://cafecito.app/digitalmenteseguro)
 
-> Codex GStack adapta el flujo de trabajo de `gstack` para que Codex pueda usarlo como una caja de herramientas completa: planificacion, revision tecnica, QA visual, navegador, auditorias, documentacion, deploy y seguimiento post-release.
+> **Codex GStack** adapts [`garrytan/gstack`](https://github.com/garrytan/gstack) into a zero-conflict `gstack-*` skill suite for **OpenAI Codex** (`~/.codex/skills`). Turn any Codex session into a structured engineering workflow: architecture planning, PR code review, live Playwright QA, visual design review, security auditing (CSO), performance benchmarking, and deployment verification.
 
-## Por que usar Codex GStack
+---
 
-Codex es muy bueno editando codigo, investigando bugs y verificando cambios. Codex GStack le agrega una estructura operativa: comandos especializados, checklists, flujos de QA, revision de arquitectura, browser automation y rutinas de deploy para convertir una sesion de Codex en un flujo de trabajo mas parecido a un equipo tecnico completo.
+## Por qué usar Codex GStack / Why Codex GStack
 
-Ideal para:
+Codex es excelente editando código, investigando bugs y ejecutando comandos. **Codex GStack** le suma estructura operativa de equipo senior sin burocracia:
 
-- 🤖 **Usuarios de Codex** que quieren comandos listos para revisar, probar y deployar.
-- 🧪 **QA de sitios web** con navegador real, screenshots, responsive checks y flujos de usuario.
-- 🛠️ **Desarrollo full-stack** con revision de bugs, seguridad, performance y DX.
-- 🚢 **Deploys mas ordenados** con pasos de verificacion antes y despues de publicar.
-- 🧠 **Equipos chicos o builders solos** que necesitan mas criterio operativo sin sumar burocracia.
+- 🤖 **50+ Skills con prefijo `gstack-*`**: se instalan directo en `~/.codex/skills` sin colisionar con tus otras skills.
+- 🧪 **Automated QA & Playwright Browser (`gstack-qa`, `gstack-browse`)**: abre un navegador headless real, toma screenshots, inspecciona el DOM, valida responsive y detecta regresiones visuales o funcionales.
+- 🔍 **AI Code Review & Root-Cause Debugging (`gstack-review`, `gstack-investigate`)**: revisa diffs buscando bugs, riesgos de seguridad y regresiones antes de mergear.
+- 🛡️ **Security Audit (`gstack-cso`)**: auditoría OWASP, escaneo de secretos, supply chain y modelado de amenazas.
+- 🚢 **Shipping & Deploy Workflows (`gstack-ship`, `gstack-land-and-deploy`, `gstack-canary`)**: automatiza checks, tests, changelogs y verificación post-deploy.
+- 💻 **Soporte nativo Windows + macOS + Linux**: scripts dedicados (`install-codex.ps1` y `install-codex.sh`) con detección automática de Bun y Git Bash.
 
-## Funciones principales
+---
 
-| Comando | Para que sirve |
-| --- | --- |
-| `gstack-qa` | Probar una app, abrir navegador, detectar errores visuales y funcionales. |
-| `gstack-review` | Revisar cambios de codigo buscando bugs, riesgos y regresiones. |
-| `gstack-investigate` | Investigar errores, fallos o comportamientos rotos. |
-| `gstack-ship` | Preparar entrega, validar tests y ordenar el cierre de cambios. |
-| `gstack-land-and-deploy` | Flujo de merge/deploy/verificacion cuando el proyecto lo permite. |
-| `gstack-design-review` | Detectar problemas de UI, responsive, jerarquia visual y consistencia. |
-| `gstack-benchmark` | Revisar performance, PageSpeed, regresiones y tiempos de carga. |
-| `gstack-cso` | Auditoria de seguridad con foco practico. |
-| `gstack-document-generate` | Crear documentacion tecnica o funcional. |
-| `gstack-context-save` / `gstack-context-restore` | Guardar y recuperar contexto de trabajo. |
-| `gstack-browse` | Navegador headless rapido para inspeccionar paginas, DOM, screenshots y flows. |
+## Instalacion rapida / Quick Start
 
-Tambien incluye skills para producto, arquitectura, diseño, documentacion, salud del repo, canary checks, retro y mas.
+### Opción 1: Pedírselo directamente a Codex (Recomendado)
 
-## Instalacion en Codex
-
-### Opcion 1: pedirselo a Codex
-
-Copia y pega esto en Codex:
+Copia y pega este prompt en tu sesión de Codex:
 
 ```text
 Instala Codex GStack desde https://github.com/facuquilmes123/codex-gstack.
 Clona el repositorio en ~/.gstack/repos/codex-gstack, instala Bun si falta, ejecuta ./setup --host codex --prefix y verifica que aparezcan las skills gstack-* en ~/.codex/skills.
 ```
 
-### Opcion 2: Windows PowerShell
+### Opción 2: Windows PowerShell
 
 ```powershell
 git clone --single-branch --depth 1 https://github.com/facuquilmes123/codex-gstack.git "$HOME\.gstack\repos\codex-gstack"
@@ -58,7 +45,7 @@ cd "$HOME\.gstack\repos\codex-gstack"
 powershell -ExecutionPolicy Bypass -File .\scripts\install-codex.ps1
 ```
 
-### Opcion 3: macOS / Linux / Git Bash
+### Opción 3: macOS / Linux / Git Bash
 
 ```bash
 git clone --single-branch --depth 1 https://github.com/facuquilmes123/codex-gstack.git ~/.gstack/repos/codex-gstack
@@ -66,20 +53,55 @@ cd ~/.gstack/repos/codex-gstack
 bash scripts/install-codex.sh
 ```
 
-## Requisitos
+### Requisitos
 
-- Git
-- Node.js en Windows
-- Bun 1.0 o superior
-- Codex con soporte de skills en `~/.codex/skills`
+- **Git** (en Windows incluye Git Bash)
+- **Node.js** (en Windows)
+- **Bun 1.0+** (los scripts lo instalan automáticamente si falta)
+- **Codex** con soporte de skills en `~/.codex/skills`
 
-Si Bun no esta instalado, los scripts intentan instalarlo automaticamente.
+---
 
-## Como usarlo
+## Skills y comandos principales (`gstack-*`)
 
-Despues de instalar, reinicia Codex o abre una nueva sesion para que cargue las skills.
+### Planificación y Arquitectura
+| Comando | Descripción |
+| --- | --- |
+| `gstack-plan-ceo-review` | Revisa el alcance, producto y estrategia antes de escribir código. |
+| `gstack-plan-eng-review` | Valida arquitectura, flujo de datos, edge cases y cobertura de tests. |
+| `gstack-plan-design-review` | Crítica de UI/UX y diseño antes de implementar. |
+| `gstack-autoplan` | Ejecuta el pipeline completo de revisión automática sobre un plan. |
 
-Ejemplos:
+### Desarrollo, Review y Debugging
+| Comando | Descripción |
+| --- | --- |
+| `gstack-review` | Code review pre-merge buscando bugs, SQL/XSS, trust boundaries y regresiones. |
+| `gstack-investigate` | Debugging sistemático con análisis de causa raíz. |
+| `gstack-health` | Dashboard de calidad del repositorio (linters, types, tests, dead code). |
+| `gstack-context-save` / `gstack-context-restore` | Guarda y recupera el contexto de trabajo entre sesiones. |
+
+### QA, Browser Automation y Diseño
+| Comando | Descripción |
+| --- | --- |
+| `gstack-qa` | QA completo con navegador real, detección y corrección iterativa de bugs. |
+| `gstack-qa-only` | Reporte estructurado de QA sin modificar código. |
+| `gstack-browse` | CLI de navegador headless ultrarrápido basado en Playwright para DOM, forms y screenshots. |
+| `gstack-design-review` | Auditoría visual de espaciado, jerarquía, responsive y consistencia UI. |
+| `gstack-benchmark` | Medición de performance, tiempos de carga y Core Web Vitals. |
+
+### Seguridad, Documentación y Deploy
+| Comando | Descripción |
+| --- | --- |
+| `gstack-cso` | Auditoría de seguridad integral (secretos, dependencias, OWASP, CI/CD). |
+| `gstack-document-generate` | Genera documentación técnica y guías desde cero. |
+| `gstack-ship` | Prepara entrega: tests, review, versión, changelog y PR. |
+| `gstack-land-and-deploy` | Merge, deploy y verificación de salud en producción (`gstack-canary`). |
+
+---
+
+## Ejemplos de uso en Codex
+
+Reiniciá Codex o abrí una nueva sesión después de instalar y probá:
 
 ```text
 Usa gstack-review para revisar mis cambios antes de deployar.
@@ -90,68 +112,57 @@ Usa gstack-qa para probar https://mi-sitio.com en mobile y desktop.
 ```
 
 ```text
-Usa gstack-investigate para encontrar por que falla este checkout.
+Usa gstack-investigate para encontrar por qué falla este checkout.
 ```
 
 ```text
-Usa gstack-design-review para detectar problemas responsive y de UI.
+Usa gstack-cso para auditar la seguridad del repositorio y detectar posibles leaks.
 ```
 
 ```text
-Usa gstack-ship para preparar el cierre, verificar tests y dejar listo el deploy.
+Usa gstack-ship para correr tests, actualizar changelog y dejar listo el deploy.
 ```
 
-## SEO: para que tipo de busquedas sirve este proyecto
+---
 
-Codex GStack esta pensado para quienes buscan:
+## Diferencias con `gstack` original
 
-- herramientas para Codex
-- skills para Codex
-- agentes de IA para programar
-- automatizacion de QA con Codex
-- revision de codigo con IA
-- testing visual con Playwright y Codex
-- browser automation para agentes de IA
-- flujo de deploy asistido por IA
-- alternativa de gstack para Codex
-- adaptar Claude Code tools a Codex
+- **Codex-first**: documentación, prompts e instaladores diseñados específicamente para **OpenAI Codex**.
+- **Prefijo `gstack-*` por defecto**: evita colisiones con otras skills en `~/.codex/skills`.
+- **Instalación optimizada en Windows y Unix**: detección dinámica de Git Bash y Bun sin pasos manuales.
 
-## Diferencia con gstack original
+La base técnica original pertenece a **Garry Tan** ([`garrytan/gstack`](https://github.com/garrytan/gstack)) bajo licencia MIT. Ver [ATTRIBUTION.md](ATTRIBUTION.md).
 
-Este repositorio es una adaptacion orientada a Codex. Mantiene la base tecnica de gstack y prioriza:
+---
 
-- Instalacion directa en `~/.codex/skills`
-- Comandos con prefijo `gstack-*` para evitar conflictos
-- Documentacion enfocada en usuarios de Codex
-- Prompts de instalacion simples para pegar directamente en Codex
-- Uso practico en proyectos reales de desarrollo web, QA, review y deploy
+## Actualizar / Update
 
-La base original pertenece a Garry Tan y esta publicada con licencia MIT. Ver [ATTRIBUTION.md](ATTRIBUTION.md).
-
-## Actualizar
-
+**macOS / Linux / Git Bash:**
 ```bash
 cd ~/.gstack/repos/codex-gstack
 git pull --ff-only
 bash scripts/install-codex.sh
 ```
 
-En Windows PowerShell:
-
+**Windows PowerShell:**
 ```powershell
 cd "$HOME\.gstack\repos\codex-gstack"
 git pull --ff-only
 powershell -ExecutionPolicy Bypass -File .\scripts\install-codex.ps1
 ```
 
-## Donaciones
+---
 
-Si este proyecto te ahorra tiempo o te ayuda a trabajar mejor con Codex, podes apoyar el mantenimiento:
+## ☕ Apoyar el proyecto / Support
 
-☕ [Donar en Cafecito](https://cafecito.app/digitalmenteseguro)
+Si **Codex GStack** te ahorra tiempo en reviews, QA o deploys, podés invitarme un cafecito para seguir manteniendo esta adaptación, scripts y mejoras:
+
+[![Invitame un Cafecito](https://img.shields.io/badge/Invitame_un-Cafecito_☕-ffdd00?style=for-the-badge)](https://cafecito.app/digitalmenteseguro)
+
+👉 **[cafecito.app/digitalmenteseguro](https://cafecito.app/digitalmenteseguro)**
+
+---
 
 ## Licencia
 
 MIT. Ver [LICENSE](LICENSE).
-
-Este proyecto conserva la atribucion del trabajo original de gstack segun los terminos de la licencia MIT.

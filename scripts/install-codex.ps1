@@ -8,7 +8,7 @@ $gitBashCandidates = @(
   "${env:ProgramFiles(x86)}\Git\bin\bash.exe"
 ) | Where-Object { $_ -and (Test-Path $_) }
 
-if (!(Test-Path $bun)) {
+if (!(Get-Command bun -ErrorAction SilentlyContinue) -and !(Test-Path $bun)) {
   Write-Host "Installing Bun..."
   powershell -ExecutionPolicy Bypass -NoProfile -Command "irm bun.sh/install.ps1 | iex"
 }
@@ -17,16 +17,21 @@ if ($gitBashCandidates.Count -eq 0) {
   throw "Git Bash was not found. Install Git for Windows and run this script again."
 }
 
-$env:Path = "$HOME\.bun\bin;C:\Program Files\Git\bin;C:\Program Files\Git\usr\bin;$env:Path"
+$gitBash = $gitBashCandidates[0]
+$gitRoot = Split-Path -Parent (Split-Path -Parent $gitBash)
+$env:Path = "$HOME\.bun\bin;$gitRoot\bin;$gitRoot\usr\bin;$env:Path"
 
 Push-Location $repoRoot
 try {
-  & $gitBashCandidates[0] ./setup --host codex --prefix
+  & $gitBash ./setup --host codex --prefix
+  if ($LASTEXITCODE -ne 0) {
+    throw "setup exited with code $LASTEXITCODE"
+  }
 }
 finally {
   Pop-Location
 }
 
 Write-Host ""
-Write-Host "Codex GStack installed."
+Write-Host "Codex GStack installed in $HOME\.codex\skills."
 Write-Host "Restart Codex or open a new session, then use commands like gstack-review, gstack-qa and gstack-ship."
